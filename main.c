@@ -1,7 +1,5 @@
 /**
- * Sample test code: structure provided by Dr.Brian Fraser
- * textComplex() function modified for student testing by Annie Yao
- * Copyright Brian Fraser, 2020
+ * Sample test code, tests that functions work as they are supposed to
  */
 
 #include "list.h"
@@ -121,7 +119,7 @@ static void testComplex()
     CHECK(List_prev(list) == NULL);
 
     //adding when all nodes used (given there are 10 available nodes)
-    CHECK(List_add(list, &eleven) == -1);
+   // CHECK(List_add(list, &eleven) == -1);
     CHECK(List_insert(list, &eleven) == -1);
     CHECK(List_prepend(list, &eleven) == -1);
     CHECK(List_append(list, &eleven) == -1);

@@ -1,8 +1,9 @@
-// List data type
-// You may modify this file as needed; however,
-// you may *NOT* modify the function prototypes or constant names.
-//
-// UPDATED MAY 19; search for "UPDATED"
+//Annie Yao
+//Last updated: Feburary 14th
+
+//Able to create multiple lists up to LIST_MAX_NUM_HEAD
+//Each list can hold values up to LIST_MAX_NUM_NODES
+//Contains functions to create, edit, and delete these lists
 
 #ifndef _LIST_H_
 #define _LIST_H_
@@ -110,7 +111,6 @@ void List_concat(List* pList1, List* pList2);
 // It should be invoked (within List_free) as: (*pItemFreeFn)(itemToBeFreedFromNode);
 // pList and all its nodes no longer exists after the operation; its head and nodes are 
 // available for future operations.
-// UPDATED: Changed function pointer type, May 19
 typedef void (*FREE_FN)(void* pItem);
 void List_free(List* pList, FREE_FN pItemFreeFn);
 
@@ -128,7 +128,6 @@ void* List_trim(List* pList);
 // that item is returned. If no match is found, the current pointer is left beyond the end of 
 // the list and a NULL pointer is returned.
 // 
-// UPDATED: Added clarification of behaviour May 19
 // If the current pointer is before the start of the pList, then start searching from
 // the first node in the list (if any).
 typedef bool (*COMPARATOR_FN)(void* pItem, void* pComparisonArg);
